@@ -1,12 +1,12 @@
 import React from 'react'
 import './Login.scss'
 import { Button } from '@mui/material'
-import { signInWithRedirect } from 'firebase/auth'
+import { signInWithPopup } from 'firebase/auth'
 import { auth, provider } from '../../firebase'
 
 function Login() {
   const signIn = () => {
-    signInWithRedirect(auth, provider).catch((err) => {
+    signInWithPopup(auth, provider).catch((err) => {
       alert(err.message)
     })
   }
