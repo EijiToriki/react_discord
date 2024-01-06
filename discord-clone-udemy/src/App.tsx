@@ -12,8 +12,7 @@ import { fallbackRender } from './utils/ErrorFallBack';
 
 function App() {
 
-  const user = useAppSelector((state) => state.user)
-  // console.log(user)
+  const user = useAppSelector((state) => state.user.user)
 
   const dispatch = useAppDispatch()
 
